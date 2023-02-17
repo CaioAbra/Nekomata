@@ -1,0 +1,9 @@
+controllers/: classes que lidam com a lógica de negócios do aplicativo.
+
+models/: classes que representam as entidades de negócios do aplicativo.
+
+views/: arquivos que representam a camada de apresentação do aplicativo.
+
+public/: esta pasta contém todos os arquivos que são acessíveis publicamente na web. É aqui que fica o arquivo index.php, que é o ponto de entrada do aplicativo.
+
+vendor/: esta pasta contém as dependências do aplicativo, caso haja alguma.
