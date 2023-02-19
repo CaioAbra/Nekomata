@@ -1,1 +1,1 @@
-sass --watch CaminhoSass CaminhoCSS
+sass --watch D:\wamp\www\Nekomata\public\scss\style.scss D:\wamp\www\Nekomata\public\css\style.css

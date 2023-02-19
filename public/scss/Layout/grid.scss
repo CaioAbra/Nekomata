@@ -1,0 +1,111 @@
+@use "sass:math";
+
+.container {
+    margin: 0 auto;
+    /* centralize o container horizontalmente */
+    padding: 0 1rem;
+    /* adicione algum espaço à esquerda e à direita do container */
+
+    @include breakpoint($breakpoint-sm) {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    @include breakpoint($breakpoint-md) {
+        max-width: 720px;
+    }
+
+    @include breakpoint($breakpoint-lg) {
+        max-width: 960px;
+    }
+
+    @include breakpoint($breakpoint-xl) {
+        max-width: 1140px;
+    }
+
+    @include breakpoint($breakpoint-xxl) {
+        max-width: 90vw;
+    }
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc($grid-gutter-width * .5);
+    margin-right: calc($grid-gutter-width * .5);
+    margin-bottom: calc($grid-gutter-heigth * .25);
+}
+
+.col {
+    padding-left: calc($grid-gutter-width * .5);
+    padding-right: calc($grid-gutter-width * .5);
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        padding-left: calc($grid-gutter-width * .5);
+        padding-right: calc($grid-gutter-width * .5);
+        flex: 0 0 math.percentage(math.div($i, $grid-columns));
+        max-width: math.percentage(math.div($i, $grid-columns));
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    @for $i from 1 through $grid-columns {
+        .col-sm-#{$i} {
+            padding-left: calc($grid-gutter-width * .5);
+            padding-right: calc($grid-gutter-width * .5);
+            flex: 0 0 math.percentage(math.div($i, $grid-columns));
+            max-width: math.percentage(math.div($i, $grid-columns));
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    @for $i from 1 through $grid-columns {
+        .col-md-#{$i} {
+            padding-left: calc($grid-gutter-width * .5);
+            padding-right: calc($grid-gutter-width * .5);
+            flex: 0 0 math.percentage(math.div($i, $grid-columns));
+            max-width: math.percentage(math.div($i, $grid-columns));
+        }
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    @for $i from 1 through $grid-columns {
+        .col-lg-#{$i} {
+            padding-left: calc($grid-gutter-width * .5);
+            padding-right: calc($grid-gutter-width * .5);
+            flex: 0 0 math.percentage(math.div($i, $grid-columns));
+            max-width: math.percentage(math.div($i, $grid-columns));
+        }
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    @for $i from 1 through $grid-columns {
+        .col-xl-#{$i} {
+            padding-left: calc($grid-gutter-width * .5);
+            padding-right: calc($grid-gutter-width * .5);
+            flex: 0 0 math.percentage(math.div($i, $grid-columns));
+            max-width: math.percentage(math.div($i, $grid-columns));
+        }
+    }
+}
+
+@media (min-width: $breakpoint-xxl) {
+    @for $i from 1 through $grid-columns {
+        .col-xxl-#{$i} {
+            padding-left: calc($grid-gutter-width * .5);
+            padding-right: calc($grid-gutter-width * .5);
+            flex: 0 0 math.percentage(math.div($i, $grid-columns));
+            max-width: math.percentage(math.div($i, $grid-columns));
+        }
+    }
+}

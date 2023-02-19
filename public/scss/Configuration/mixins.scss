@@ -1,0 +1,5 @@
+@mixin breakpoint($largura-minima) {
+    @media only screen and (min-width: $largura-minima) {
+        @content;
+    }
+}
